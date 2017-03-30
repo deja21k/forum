@@ -43,3 +43,944 @@ Migrating to CreatePosts (20170330175124)
   [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-30 17:51:45 UTC], ["updated_at", 2017-03-30 17:51:45 UTC]]
   [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-03-30 19:59:50 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 616ms (Views: 608.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-03-30 20:02:19 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/new.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 33.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-03-30 20:03:59 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (238.6ms)
+  Rendered posts/new.html.haml within layouts/application (240.7ms)
+Completed 200 OK in 259ms (Views: 258.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-03-30 20:05:38 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t2N6vAnP2urYSRVq3Xjs7KkLDmMR+8xMQsQ0AGGjo+MFvMfqhHO6zlFazvYmQTSIqW4JDICMtrCcgraHFu5R3A==", "post"=>{"title"=>"First forum post !!!", "content"=>"Flexitarian pour-over unicorn, poutine normcore dreamcatcher freegan aesthetic post-ironic. Occupy la croix iceland, put a bird on it tote bag PBR&B whatever 3 wolf moon pok pok twee. Green juice raclette af post-ironic brooklyn. Lomo kogi woke pork belly, disrupt celiac knausgaard hell of poke williamsburg. Normcore celiac lyft stumptown tumeric tilde. Sriracha jianbing church-key, chartreuse marfa vinyl flexitarian twee ennui af wolf kombucha glossier deep v normcore. Chia small batch pinterest, chambray distillery umami direct trade DIY.\r\n\r\nCornhole typewriter freegan, heirloom vice XOXO chicharrones. Williamsburg 3 wolf moon vexillologist ennui. Disrupt farm-to-table beard iPhone, salvia tumblr mumblecore try-hard brooklyn ethical typewriter seitan cardigan. Affogato kickstarter taxidermy cred, man braid ugh pour-over. Cardigan master cleanse scenester YOLO church-key. XOXO mumblecore chicharrones, gentrify chillwave selvage pork belly cray sriracha hella hoodie cliche 8-bit heirloom church-key. Cray authentic 8-bit meggings, fingerstache church-key bespoke iPhone lumbersexual succulents lo-fi."}, "commit"=>"Create Post"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "First forum post !!!"], ["content", "Flexitarian pour-over unicorn, poutine normcore dreamcatcher freegan aesthetic post-ironic. Occupy la croix iceland, put a bird on it tote bag PBR&B whatever 3 wolf moon pok pok twee. Green juice raclette af post-ironic brooklyn. Lomo kogi woke pork belly, disrupt celiac knausgaard hell of poke williamsburg. Normcore celiac lyft stumptown tumeric tilde. Sriracha jianbing church-key, chartreuse marfa vinyl flexitarian twee ennui af wolf kombucha glossier deep v normcore. Chia small batch pinterest, chambray distillery umami direct trade DIY.\r\n\r\nCornhole typewriter freegan, heirloom vice XOXO chicharrones. Williamsburg 3 wolf moon vexillologist ennui. Disrupt farm-to-table beard iPhone, salvia tumblr mumblecore try-hard brooklyn ethical typewriter seitan cardigan. Affogato kickstarter taxidermy cred, man braid ugh pour-over. Cardigan master cleanse scenester YOLO church-key. XOXO mumblecore chicharrones, gentrify chillwave selvage pork belly cray sriracha hella hoodie cliche 8-bit heirloom church-key. Cray authentic 8-bit meggings, fingerstache church-key bespoke iPhone lumbersexual succulents lo-fi."], ["created_at", 2017-03-30 18:05:38 UTC], ["updated_at", 2017-03-30 18:05:38 UTC]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 23ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:05:38 +0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for PostsController):
+  
+actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:07:09 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.haml within layouts/application
+  Rendered posts/show.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 11.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:07:09 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.haml within layouts/application
+  Rendered posts/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:15:26 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_post' for #<PostsController:0x007f8f11b142c8>):
+  
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.2) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.1ms)
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:15:28 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_post' for #<PostsController:0x007f8f1153d278>):
+  
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.2) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.1ms)
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:16:27 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_post' for #<PostsController:0x0055826b8a2468>):
+  
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.2) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.3ms)
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:17:32 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_post' for #<PostsController:0x007f8f11fe4500>):
+  
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.2) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.5ms)
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:18:20 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_posts' for #<PostsController:0x007f8f0c2dfad0>):
+  
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.2) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.4ms)
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:18:21 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_posts' for #<PostsController:0x007f8f0402b990>):
+  
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.2) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.5ms)
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:19:29 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.haml within layouts/application
+  Rendered posts/show.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 13.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:19:30 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.haml within layouts/application
+  Rendered posts/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:20:35 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.haml within layouts/application
+  Rendered posts/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2017-03-30 20:20:36 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.haml within layouts/application
+  Rendered posts/_form.html.haml (5.4ms)
+  Rendered posts/edit.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:20:37 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.haml within layouts/application
+  Rendered posts/show.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 20.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2017-03-30 20:20:45 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.haml within layouts/application
+  Rendered posts/_form.html.haml (8.0ms)
+  Rendered posts/edit.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2017-03-30 20:20:49 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0pfROCvQBSh0Y6VP3MqV8CzsyojRN1GhtWDXGxgEOKhiSvijfe12bekOrwf/764kwelOakmdEZr+pCFSdlJxKQ==", "post"=>{"title"=>"First forum post !!! Edited", "content"=>"Flexitarian pour-over unicorn, poutine normcore dreamcatcher freegan aesthetic post-ironic. Occupy la croix iceland, put a bird on it tote bag PBR&B whatever 3 wolf moon pok pok twee. Green juice raclette af post-ironic brooklyn. Lomo kogi woke pork belly, disrupt celiac knausgaard hell of poke williamsburg. Normcore celiac lyft stumptown tumeric tilde. Sriracha jianbing church-key, chartreuse marfa vinyl flexitarian twee ennui af wolf kombucha glossier deep v normcore. Chia small batch pinterest, chambray distillery umami direct trade DIY.\r\n\r\n  Cornhole typewriter freegan, heirloom vice XOXO chicharrones. Williamsburg 3 wolf moon vexillologist ennui. Disrupt farm-to-table beard iPhone, salvia tumblr mumblecore try-hard brooklyn ethical typewriter seitan cardigan. Affogato kickstarter taxidermy cred, man braid ugh pour-over. Cardigan master cleanse scenester YOLO church-key. XOXO mumblecore chicharrones, gentrify chillwave selvage pork belly cray sriracha hella hoodie cliche 8-bit heirloom church-key. Cray authentic 8-bit meggings, fingerstache church-key bespoke iPhone lumbersexual succulents lo-fi."}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/posts_controller.rb:28:in `update'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.9ms)
+Started PATCH "/posts/1" for 127.0.0.1 at 2017-03-30 20:21:21 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QVEPJCJSrn56Y0j+5vuxCjNDt5A19ywU3B+dUVm945nzjrJyr+7OWvNwk2IdwmluMyaw/6SAVugCWR/WLvARpg==", "post"=>{"title"=>"First forum post !!! Edited", "content"=>"Flexitarian pour-over unicorn, poutine normcore dreamcatcher freegan aesthetic post-ironic. Occupy la croix iceland, put a bird on it tote bag PBR&B whatever 3 wolf moon pok pok twee. Green juice raclette af post-ironic brooklyn. Lomo kogi woke pork belly, disrupt celiac knausgaard hell of poke williamsburg. Normcore celiac lyft stumptown tumeric tilde. Sriracha jianbing church-key, chartreuse marfa vinyl flexitarian twee ennui af wolf kombucha glossier deep v normcore. Chia small batch pinterest, chambray distillery umami direct trade DIY.\r\n\r\n  Cornhole typewriter freegan, heirloom vice XOXO chicharrones. Williamsburg 3 wolf moon vexillologist ennui. Disrupt farm-to-table beard iPhone, salvia tumblr mumblecore try-hard brooklyn ethical typewriter seitan cardigan. Affogato kickstarter taxidermy cred, man braid ugh pour-over. Cardigan master cleanse scenester YOLO church-key. XOXO mumblecore chicharrones, gentrify chillwave selvage pork belly cray sriracha hella hoodie cliche 8-bit heirloom church-key. Cray authentic 8-bit meggings, fingerstache church-key bespoke iPhone lumbersexual succulents lo-fi."}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "First forum post !!! Edited"], ["content", "Flexitarian pour-over unicorn, poutine normcore dreamcatcher freegan aesthetic post-ironic. Occupy la croix iceland, put a bird on it tote bag PBR&B whatever 3 wolf moon pok pok twee. Green juice raclette af post-ironic brooklyn. Lomo kogi woke pork belly, disrupt celiac knausgaard hell of poke williamsburg. Normcore celiac lyft stumptown tumeric tilde. Sriracha jianbing church-key, chartreuse marfa vinyl flexitarian twee ennui af wolf kombucha glossier deep v normcore. Chia small batch pinterest, chambray distillery umami direct trade DIY.\r\n\r\n  Cornhole typewriter freegan, heirloom vice XOXO chicharrones. Williamsburg 3 wolf moon vexillologist ennui. Disrupt farm-to-table beard iPhone, salvia tumblr mumblecore try-hard brooklyn ethical typewriter seitan cardigan. Affogato kickstarter taxidermy cred, man braid ugh pour-over. Cardigan master cleanse scenester YOLO church-key. XOXO mumblecore chicharrones, gentrify chillwave selvage pork belly cray sriracha hella hoodie cliche 8-bit heirloom church-key. Cray authentic 8-bit meggings, fingerstache church-key bespoke iPhone lumbersexual succulents lo-fi."], ["updated_at", 2017-03-30 18:21:21 UTC], ["id", 1]]
+  [1m[35m (16.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 29ms (ActiveRecord: 17.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:21:21 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.haml within layouts/application
+  Rendered posts/show.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-03-30 20:21:48 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (4.0ms)
+  Rendered posts/new.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-03-30 20:22:10 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ejp1/s/tmQaK+WquqE/f31R/xrFWYju/ClAwkLe/kGHI5cioQlH5IgPqsTJTdge7VBrB3scVQUPUFrIXwPJiXg==", "post"=>{"title"=>"Post for DELETE", "content"=>"DELETE THIS DAMN POST !"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Post for DELETE"], ["content", "DELETE THIS DAMN POST !"], ["created_at", 2017-03-30 18:22:10 UTC], ["updated_at", 2017-03-30 18:22:10 UTC]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 17ms (ActiveRecord: 13.3ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-03-30 20:22:11 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.haml within layouts/application
+  Rendered posts/show.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/posts/2" for 127.0.0.1 at 2017-03-30 20:22:14 +0200
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7UyASXYiRhpEotCq5lkEYwHSFSNrEyzJJ5wAXgFa5TVfkz0f+54mPs2xCzYdYNwHAbcSTPpkVjX52oLZdhcXCg==", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (15.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 16.3ms)
+
+
+  
+NameError (undefined local variable or method `root_paths' for #<PostsController:0x007f8f11dfddb8>
+Did you mean?  root_path):
+  
+app/controllers/posts_controller.rb:37:in `destroy'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.7ms)
+Started DELETE "/posts/2" for 127.0.0.1 at 2017-03-30 20:22:29 +0200
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7UyASXYiRhpEotCq5lkEYwHSFSNrEyzJJ5wAXgFa5TVfkz0f+54mPs2xCzYdYNwHAbcSTPpkVjX52oLZdhcXCg==", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=2):
+  
+app/controllers/posts_controller.rb:43:in `find_post'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.9ms)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-03-30 20:23:45 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-03-30 20:23:59 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-03-30 20:24:04 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.haml within layouts/application
+  Rendered posts/show.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/posts/1" for 127.0.0.1 at 2017-03-30 20:24:09 +0200
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"b7w9zZ8yb9s3E06tnMeVTU5mYQw8nGgPbTpayPnre2zdY4CbEo4P/74AlTFn/k0pTgNmY63rEvOzfNhPjqaJUw==", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (17.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 18.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-30 20:24:09 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-03-30 20:24:16 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=2):
+  
+app/controllers/posts_controller.rb:43:in `find_post'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.4ms)
+Started GET "/posts/new" for 127.0.0.1 at 2017-03-30 20:24:39 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (4.3ms)
+  Rendered posts/new.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-03-30 20:24:51 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1/ucnK9xxG9PeHJGaV4LF7/j3dcv05Cf8xQklEnE8r5lJCHKIs2kS8ZrqdqSZ9Nzv4bauL6k6mMtUqYTPokAgQ==", "post"=>{"title"=>"First forum post !!!", "content"=>"Flexitarian pour-over unicorn, poutine normcore dreamcatcher freegan aesthetic post-ironic. Occupy la croix iceland, put a bird on it tote bag PBR&B whatever 3 wolf moon pok pok twee. Green juice raclette af post-ironic brooklyn. Lomo kogi woke pork belly, disrupt celiac knausgaard hell of poke williamsburg. Normcore celiac lyft stumptown tumeric tilde. Sriracha jianbing church-key, chartreuse marfa vinyl flexitarian twee ennui af wolf kombucha glossier deep v normcore. Chia small batch pinterest, chambray distillery umami direct trade DIY.\r\n\r\nCornhole typewriter freegan, heirloom vice XOXO chicharrones. Williamsburg 3 wolf moon vexillologist ennui. Disrupt farm-to-table beard iPhone, salvia tumblr mumblecore try-hard brooklyn ethical typewriter seitan cardigan. Affogato kickstarter taxidermy cred, man braid ugh pour-over. Cardigan master cleanse scenester YOLO church-key. XOXO mumblecore chicharrones, gentrify chillwave selvage pork belly cray sriracha hella hoodie cliche 8-bit heirloom church-key. Cray authentic 8-bit meggings, fingerstache church-key bespoke iPhone lumbersexual succulents lo-fi."}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "First forum post !!!"], ["content", "Flexitarian pour-over unicorn, poutine normcore dreamcatcher freegan aesthetic post-ironic. Occupy la croix iceland, put a bird on it tote bag PBR&B whatever 3 wolf moon pok pok twee. Green juice raclette af post-ironic brooklyn. Lomo kogi woke pork belly, disrupt celiac knausgaard hell of poke williamsburg. Normcore celiac lyft stumptown tumeric tilde. Sriracha jianbing church-key, chartreuse marfa vinyl flexitarian twee ennui af wolf kombucha glossier deep v normcore. Chia small batch pinterest, chambray distillery umami direct trade DIY.\r\n\r\nCornhole typewriter freegan, heirloom vice XOXO chicharrones. Williamsburg 3 wolf moon vexillologist ennui. Disrupt farm-to-table beard iPhone, salvia tumblr mumblecore try-hard brooklyn ethical typewriter seitan cardigan. Affogato kickstarter taxidermy cred, man braid ugh pour-over. Cardigan master cleanse scenester YOLO church-key. XOXO mumblecore chicharrones, gentrify chillwave selvage pork belly cray sriracha hella hoodie cliche 8-bit heirloom church-key. Cray authentic 8-bit meggings, fingerstache church-key bespoke iPhone lumbersexual succulents lo-fi."], ["created_at", 2017-03-30 18:24:51 UTC], ["updated_at", 2017-03-30 18:24:51 UTC]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 20ms (ActiveRecord: 15.8ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2017-03-30 20:24:51 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.haml within layouts/application
+  Rendered posts/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/posts/3" for 127.0.0.1 at 2017-03-30 20:24:54 +0200
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MOqW2QNKJ28CmtDkF0dhLWlCuYVwAmSnC4ym1mM3Vv+CNSuPjvZHS4uJC3jsfrlJaSe+6uF1HlvVyiRRFHqkwA==", "id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 3]]
+  [1m[35m (26.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 30ms (ActiveRecord: 26.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-30 20:24:54 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-03-30 20:25:00 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (4.8ms)
+  Rendered posts/new.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-03-30 20:25:09 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jqgWCnNptjgavZPQBs0VpVbBDqDPhckpqYCeYAym87k8d6tc/tXWHJOuSEz99M3BVqQJz17ys9V3xhzne+sBhg==", "post"=>{"title"=>"First forum post !!! Edited", "content"=>"Flexitarian pour-over unicorn, poutine normcore dreamcatcher freegan aesthetic post-ironic. Occupy la croix iceland, put a bird on it tote bag PBR&B whatever 3 wolf moon pok pok twee. Green juice raclette af post-ironic brooklyn. Lomo kogi woke pork belly, disrupt celiac knausgaard hell of poke williamsburg. Normcore celiac lyft stumptown tumeric tilde. Sriracha jianbing church-key, chartreuse marfa vinyl flexitarian twee ennui af wolf kombucha glossier deep v normcore. Chia small batch pinterest, chambray distillery umami direct trade DIY.\r\n\r\nCornhole typewriter freegan, heirloom vice XOXO chicharrones. Williamsburg 3 wolf moon vexillologist ennui. Disrupt farm-to-table beard iPhone, salvia tumblr mumblecore try-hard brooklyn ethical typewriter seitan cardigan. Affogato kickstarter taxidermy cred, man braid ugh pour-over. Cardigan master cleanse scenester YOLO church-key. XOXO mumblecore chicharrones, gentrify chillwave selvage pork belly cray sriracha hella hoodie cliche 8-bit heirloom church-key. Cray authentic 8-bit meggings, fingerstache church-key bespoke iPhone lumbersexual succulents lo-fi."}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "First forum post !!! Edited"], ["content", "Flexitarian pour-over unicorn, poutine normcore dreamcatcher freegan aesthetic post-ironic. Occupy la croix iceland, put a bird on it tote bag PBR&B whatever 3 wolf moon pok pok twee. Green juice raclette af post-ironic brooklyn. Lomo kogi woke pork belly, disrupt celiac knausgaard hell of poke williamsburg. Normcore celiac lyft stumptown tumeric tilde. Sriracha jianbing church-key, chartreuse marfa vinyl flexitarian twee ennui af wolf kombucha glossier deep v normcore. Chia small batch pinterest, chambray distillery umami direct trade DIY.\r\n\r\nCornhole typewriter freegan, heirloom vice XOXO chicharrones. Williamsburg 3 wolf moon vexillologist ennui. Disrupt farm-to-table beard iPhone, salvia tumblr mumblecore try-hard brooklyn ethical typewriter seitan cardigan. Affogato kickstarter taxidermy cred, man braid ugh pour-over. Cardigan master cleanse scenester YOLO church-key. XOXO mumblecore chicharrones, gentrify chillwave selvage pork belly cray sriracha hella hoodie cliche 8-bit heirloom church-key. Cray authentic 8-bit meggings, fingerstache church-key bespoke iPhone lumbersexual succulents lo-fi."], ["created_at", 2017-03-30 18:25:09 UTC], ["updated_at", 2017-03-30 18:25:09 UTC]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/4
+Completed 302 Found in 22ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2017-03-30 20:25:09 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/show.html.haml within layouts/application
+  Rendered posts/show.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
