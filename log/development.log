@@ -984,3 +984,87 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-03-31 18:55:32 +0200
+Started GET "/" for 127.0.0.1 at 2017-03-31 18:55:33 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.haml within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  Rendered posts/index.html.haml within layouts/application (38.7ms)
+Completed 200 OK in 1011ms (Views: 955.7ms | ActiveRecord: 0.6ms)
+
+
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.haml within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  Rendered posts/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-31 18:56:34 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.haml within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  Rendered posts/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-31 18:56:35 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.haml within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  Rendered posts/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-31 18:57:12 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.haml within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  Rendered posts/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-31 18:57:13 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.haml within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  Rendered posts/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-03-31 18:57:15 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (66.8ms)
+  Rendered posts/new.html.haml within layouts/application (68.6ms)
+Completed 200 OK in 82ms (Views: 80.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-03-31 18:57:36 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0JEnwBUItAs/lDfC2NA+zs8TW+fI3xhHZFJ602gIss9hIjNhOQosDXzPLCnp2q/5bWmMblnKGYKnMCoMq76Qbg==", "post"=>{"title"=>"Another Post", "content"=>"Lumbersexual yuccie kinfolk, pok pok normcore meggings kogi. Fixie drinking vinegar affogato listicle, DIY microdosing craft beer. Crucifix everyday carry woke, church-key kogi polaroid sartorial twee subway tile. Letterpress austin hashtag plaid bespoke viral glossier portland tacos kale chips, flannel pour-over swag helvetica. Vegan dreamcatcher keffiyeh hexagon pug, brooklyn pork belly mumblecore schlitz. Actually locavore mlkshk, hell of before they sold out master cleanse ennui cold-pressed next level pabst thundercats fixie XOXO artisan. Humblebrag yuccie hell of, thundercats four loko chartreuse paleo polaroid green juice pop-up try-hard chicharrones."}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Another Post"], ["content", "Lumbersexual yuccie kinfolk, pok pok normcore meggings kogi. Fixie drinking vinegar affogato listicle, DIY microdosing craft beer. Crucifix everyday carry woke, church-key kogi polaroid sartorial twee subway tile. Letterpress austin hashtag plaid bespoke viral glossier portland tacos kale chips, flannel pour-over swag helvetica. Vegan dreamcatcher keffiyeh hexagon pug, brooklyn pork belly mumblecore schlitz. Actually locavore mlkshk, hell of before they sold out master cleanse ennui cold-pressed next level pabst thundercats fixie XOXO artisan. Humblebrag yuccie hell of, thundercats four loko chartreuse paleo polaroid green juice pop-up try-hard chicharrones."], ["created_at", 2017-03-31 16:57:36 UTC], ["updated_at", 2017-03-31 16:57:36 UTC]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 15ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2017-03-31 18:57:36 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/show.html.haml within layouts/application
+  Rendered posts/show.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-31 18:57:39 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.haml within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  Rendered posts/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.2ms)
+
+
