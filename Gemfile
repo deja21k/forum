@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'simple_form', '~> 3.4'
 gem 'devise', '~> 4.2', '>= 4.2.1'
+gem 'normalize-scss', '~> 6.0'
 
 
 group :development, :test do
